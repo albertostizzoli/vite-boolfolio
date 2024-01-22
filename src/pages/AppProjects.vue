@@ -1,12 +1,12 @@
 <template>
     <div>
-        <ul>
+        <ul class="mt-2">
             <li v-for="project in projects" :key="project.id">
                 <router-link :to="{name: 'single-project', params: {slug: project.slug}}" class="btn btn-primary">{{ project.title }}</router-link>
             </li>
         </ul>
-        <button @click="previousPage()">Indietro</button>
-        <button @click="nextPage()">Avanti</button>
+        <button class="btn btn-danger me-2" @click="previousPage()">Indietro</button>
+        <button class="btn btn-success ms-2" @click="nextPage()">Avanti</button>
     </div>
     <!--AppCard :project="project"></AppCard>-->
 </template>
