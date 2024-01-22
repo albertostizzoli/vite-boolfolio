@@ -48,6 +48,7 @@ export default {
         this.getAllProjects();
     }
 }
+
 </script>
 
 <style lang="scss" scoped></style>
