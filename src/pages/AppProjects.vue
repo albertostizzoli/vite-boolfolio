@@ -1,20 +1,13 @@
 <template>
-    <!--<div>
+    <div>
         <ul>
-            <li v-for="project in projects" :key="project.slug">{{ project.title }}</li>
+            <li v-for="project in projects" :key="project.slug">
+                <router-link :to="{name: 'single-project', params: {slug: project.slug}}" class="btn btn-primary">{{ project.title }}</router-link>
+            </li>
         </ul>
         <button @click="previousPage()">Indietro</button>
         <button @click="nextPage()">Avanti</button>
-    </div>-->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-4 col-lg-3" v-for="project in projects" :key="project.slug">
-                <AppCard :project="project" />
-            </div>
-        </div>
     </div>
-    <button @click="previousPage()">Indietro</button>
-    <button @click="nextPage()">Avanti</button>
 </template>
 
 <script>
@@ -23,6 +16,9 @@ import { store } from '../store.js';
 import AppCard from '../components/AppCard.vue';
 export default {
     name: 'AppProjects',
+    components: {
+       AppCard
+    },
     data() {
         return {
             store,
@@ -58,6 +54,7 @@ export default {
         this.getAllProjects();
     }
 }
+
 
 </script>
 
