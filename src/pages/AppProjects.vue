@@ -1,16 +1,26 @@
 <template>
-    <div>
+    <!--<div>
         <ul>
             <li v-for="project in projects" :key="project.slug">{{ project.title }}</li>
         </ul>
         <button @click="previousPage()">Indietro</button>
         <button @click="nextPage()">Avanti</button>
+    </div>-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-3" v-for="project in projects" :key="project.slug">
+                <AppCard :project="project" />
+            </div>
+        </div>
     </div>
+    <button @click="previousPage()">Indietro</button>
+    <button @click="nextPage()">Avanti</button>
 </template>
 
 <script>
 import axios from "axios";
 import { store } from '../store.js';
+import AppCard from '../components/AppCard.vue';
 export default {
     name: 'AppProjects',
     data() {
