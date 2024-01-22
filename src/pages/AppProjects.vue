@@ -1,24 +1,25 @@
 <template>
     <div>
         <ul>
-            <li v-for="project in projects" :key="project.slug">
+            <li v-for="project in projects" :key="project.id">
                 <router-link :to="{name: 'single-project', params: {slug: project.slug}}" class="btn btn-primary">{{ project.title }}</router-link>
             </li>
         </ul>
         <button @click="previousPage()">Indietro</button>
         <button @click="nextPage()">Avanti</button>
     </div>
+    <!--AppCard :project="project"></AppCard>-->
 </template>
 
 <script>
 import axios from "axios";
 import { store } from '../store.js';
-import AppCard from '../components/AppCard.vue';
+// import AppCard from '../components/AppCard.vue';
 export default {
     name: 'AppProjects',
-    components: {
-       AppCard
-    },
+ /*components: {
+          AppCard
+    }, */  
     data() {
         return {
             store,
@@ -29,7 +30,7 @@ export default {
     },
     methods: {
         getAllProjects() {
-            axios.get(store.apiUrl + "/projects", { params: { page: this.currentPage } }).then((res) => {
+            axios.get(store.apiUrl + "projects", { params: { page: this.currentPage } }).then((res) => {
                 console.log(res.data);
                 this.projects = res.data.results.data;
                 console.log(this.projects);

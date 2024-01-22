@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 v-if="project">{{ project.title }}</h1>
-        <img :src="`${store.apiImg}${project.img}`" :alt="project.title">
+        <img :src="`${store.apiImg}${project.image}`" :alt="project.title">
     </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
     data() {
         return {
             store,
-            project: null
+            project: null   
         }
     },
     methods: {

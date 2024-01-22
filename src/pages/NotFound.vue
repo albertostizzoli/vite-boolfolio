@@ -1,9 +1,3 @@
-<script>
-export default {
-
-}
-</script>
-
 <template lang="">
     <div class="container">
         <div class="row">
@@ -13,5 +7,12 @@ export default {
         </div>
     </div>
 </template>
+
+<script>
+export default {
+
+}
+</script>
+
 
 <style lang="scss" scoped></style>
