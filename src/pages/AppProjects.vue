@@ -6,9 +6,11 @@
                 <AppCard :project="project" />
             </div>
         </div>
+        <div class="d-flex align-items-center justify-content-between ">
+            <button class="btn btn-danger me-2" @click="previousPage()">Indietro</button>
+            <button class="btn btn-success ms-2" @click="nextPage()">Avanti</button>
+        </div>
     </main>
-    <button class="btn btn-danger me-2" @click="previousPage()">Indietro</button>
-    <button class="btn btn-success ms-2" @click="nextPage()">Avanti</button>
 </template>
 
 <script>

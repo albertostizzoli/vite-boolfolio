@@ -1,7 +1,28 @@
 <template>
-    <div>
-        <h1 v-if="project">{{ project.title }}</h1>
-        <img :src="`${store.apiImg}${project.image}`" :alt="project.title">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 v-if="project">{{ project.title }}</h1>
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p>{{ project.description }}</p>
+                        <h4>Repo GitHub:</h4>
+                        <a :href="project.url">Clicca qui</a>
+                        <div>
+                        <h4>Tipo:</h4>
+                        <p>{{ project.type.name }}</p>
+                    </div>
+                    <div>
+                        <h4>Tecnologie:</h4>
+                        <p>{{ project.technology.name}}</p>
+                    </div>
+                    </div>
+                    <div>
+                        <img :src="`${store.apiImg}${project.image}`" :alt="project.title">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 

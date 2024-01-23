@@ -1,10 +1,12 @@
 <template>
-    <div class="card">
+    <router-link class="col-12 col-md-4 col-lg-3" :to="{ name: 'single-project', params: { slug: project.slug } }">
         <img :src="`${store.apiImg}${project.image}`" class="card-img-top" alt="...">
-        <router-link :to="{ name: 'single-project', params: { slug: project.slug } }" class="btn btn-primary">
-            {{ project.title }}
-        </router-link>
-    </div>
+        <div class="card my-3 d-flex justify-content-center align-items-center">
+            <div class="card-body">
+                <h3 class="card-title">{{ project.title }}</h3>
+            </div>
+        </div>
+    </router-link>
 </template>
 
 <script>
@@ -17,8 +19,6 @@ export default {
             store,
         }
     }
-
-
 }
 </script>
 
