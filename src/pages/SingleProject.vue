@@ -7,10 +7,21 @@
                     <div>
                         <p>{{ project.description }}</p>
                         <h4>Repo GitHub:</h4>
-                        <a :href="project.url">Clicca qui</a>
-                        <div>
+                        <button class="btn btn-primary">
+                            <a class="text-white text-decoration-none" :href="project.url">Clicca qui</a>
+                        </button>
+                        <div class="mt-3">
                             <h4>Tipo:</h4>
-                            <p>{{ project.type.name }}</p>
+                            <p class="badge text-bg-primary p-3">{{ project.type.name }}</p>
+                        </div>
+                        <div class="mb-3">
+                            <h4>Tecnologie:</h4>
+                            <ul>
+                                <li class="badge rounded-pill text-bg-warning p-3"
+                                    v-for="technology in project.technologies">{{ technology.name }}</li>
+                            </ul>
+                        </div>
+                        <div>
                             <img class="img" :src="`${store.apiImg}${project.image}`" :alt="project.title">
                         </div>
                     </div>
@@ -52,5 +63,9 @@ export default {
 .img {
     height: 300px;
     object-fit: cover;
+}
+
+li {
+    list-style-type: none;
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
-    <main class="container">
-        <h1>Progetti</h1>
+    <main class="container mt-3">
+        <h1 class="text-center">Progetti</h1>
         <div class="row">
-            <div class="col-12 col-md-4 col-lg-3" v-for="project in projects" :key="project.id">
+            <div class="col-12 col-md-4 col-lg-3 mt-3" v-for="project in projects" :key="project.id">
                 <AppCard :project="project" />
             </div>
         </div>
