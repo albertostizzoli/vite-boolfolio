@@ -12,17 +12,13 @@
                         <h4>Tipo:</h4>
                         <p>{{ project.type.name }}</p>
                     </div>
-                    <div>
-                        <h4>Tecnologie:</h4>
-                        <p>{{ project.technology.name}}</p>
-                    </div>
-                    </div>
-                    <div>
+                    <div class="img">
                         <img :src="`${store.apiImg}${project.image}`" :alt="project.title">
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </template>
 
@@ -54,4 +50,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.img{
+    height: 300px;
+    object-fit: cover;
+}
+</style>
