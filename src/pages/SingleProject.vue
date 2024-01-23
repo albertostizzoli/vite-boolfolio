@@ -13,24 +13,23 @@ export default {
     data() {
         return {
             store,
-            project: null   
+            project: null
         }
     },
     methods: {
         getProjectData() {
-            axios.get(this.store.apiUrl + "projects/" + this.$route.params.slug).then((res) =>{
-                if(res.data.results){
+            axios.get(this.store.apiUrl + "projects/" + this.$route.params.slug).then((res) => {
+                if (res.data.results) {
                     this.project = res.data.results;
                 } else {
-                    this.$router.push({name: "not-found"});
+                    this.$router.push({ name: "not-found" });
                 }
             });
-        },
-        created(){
-            this.getProjectData()
         }
     },
-
+    created() {
+        this.getProjectData();
+    }
 }
 </script>
 

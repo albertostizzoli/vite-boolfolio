@@ -1,25 +1,25 @@
 <template>
-    <div>
-        <ul class="mt-2">
-            <li v-for="project in projects" :key="project.id">
-                <router-link :to="{name: 'single-project', params: {slug: project.slug}}" class="btn btn-primary">{{ project.title }}</router-link>
-            </li>
-        </ul>
-        <button class="btn btn-danger me-2" @click="previousPage()">Indietro</button>
-        <button class="btn btn-success ms-2" @click="nextPage()">Avanti</button>
-    </div>
-    <!--AppCard :project="project"></AppCard>-->
+    <main class="container">
+        <h1>Progetti</h1>
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-3" v-for="project in projects" :key="project.id">
+                <AppCard :project="project" />
+            </div>
+        </div>
+    </main>
+    <button class="btn btn-danger me-2" @click="previousPage()">Indietro</button>
+    <button class="btn btn-success ms-2" @click="nextPage()">Avanti</button>
 </template>
 
 <script>
 import axios from "axios";
 import { store } from '../store.js';
-// import AppCard from '../components/AppCard.vue';
+import AppCard from '../components/AppCard.vue';
 export default {
     name: 'AppProjects',
- /*components: {
-          AppCard
-    }, */  
+    components: {
+        AppCard
+    },
     data() {
         return {
             store,
