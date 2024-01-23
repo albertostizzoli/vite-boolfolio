@@ -9,16 +9,14 @@
                         <h4>Repo GitHub:</h4>
                         <a :href="project.url">Clicca qui</a>
                         <div>
-                        <h4>Tipo:</h4>
-                        <p>{{ project.type.name }}</p>
-                    </div>
-                    <div class="img">
-                        <img :src="`${store.apiImg}${project.image}`" :alt="project.title">
+                            <h4>Tipo:</h4>
+                            <p>{{ project.type.name }}</p>
+                            <img class="img" :src="`${store.apiImg}${project.image}`" :alt="project.title">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </template>
 
@@ -51,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.img{
+.img {
     height: 300px;
     object-fit: cover;
 }
