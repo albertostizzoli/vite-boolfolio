@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Contattami</h1>
+        <h1 class="text-center mt-1 mb-3">Contattami</h1>
         <ContactForm />
     </div>
 </template>
