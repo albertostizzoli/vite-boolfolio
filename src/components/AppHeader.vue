@@ -34,7 +34,12 @@ export default {
                     label: "Progetti",
                     name: 'projects',
                    
-                }
+                },
+                {
+                    label: "Contatti",
+                    name: 'contacts',
+                   
+                },
             ]
         }
     }
