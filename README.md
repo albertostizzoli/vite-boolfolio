@@ -1,6 +1,8 @@
 ## Esercizio di oggi: Laravel Boolfolio - API
 
-## nome repo: vite-boolfolio
+# nome repo: vite-boolfolio
+
+# 1'Parte: 22/01/2024
 
 Ciao ragazzi,
 continuiamo a lavorare sul codice dei giorni scorsi, ma in una nuova repo.
@@ -25,7 +27,9 @@ Creiamo anche un componente NotFound per la rotta di fallback.
 Gestire la paginazione dei risultati nella pagina dei progetti
 Creare una barra di navigazione in un componente header e un componente per il footer
 
+# 2'Parte: 24/01/2024
 
+Oggi aggiungete al vostro portfolio un form di conatatto che invii una mail (lavorate sule due repo di laravel e vue)
 
 
 # .

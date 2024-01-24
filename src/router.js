@@ -28,7 +28,7 @@ const router = createRouter({
         },
 
         {
-            path: "/contacts/",
+            path: "/contacts",
             name: "contacts",
             component: AppContact
         },
